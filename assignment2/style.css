@@ -1,0 +1,208 @@
+/*
+ * You should write your CSS in this file.  Don't forget to add your name and
+ * @oregonstate.edu email address below.
+ *
+ * name: Hla Htun
+ * email: kshaph@oregonstate.edu
+ */
+
+
+/* =================== HEADER =======================*/
+ header {
+  width: 100%;
+  display: inline-flex;
+  background-color: black;
+  margin-bottom: 7px;
+ }
+
+ body {
+  margin: 0px;
+ }
+ 
+.site-title > a {
+  font-family: 'Roboto Slab', sans-serif;
+  font-size: 70px;
+  font-weight: 100;
+  color: white;
+  text-decoration: none;
+
+  position: relative;
+  top: 30px;
+  left: 20px; 
+}
+
+/* whole of filter container and posts */
+.content {
+  display: inline-flex;
+}
+
+/* =================== FILTER =======================*/
+.filter-container {
+  font-family: 'Roboto', sans-serif;
+
+  background-color: #edeced;
+  max-width: 230px;
+  height: 410px;
+  margin-left: 7px;
+}
+
+.filter-container > h2 {
+  padding-left: 17px;
+}
+
+/* label and form */
+.filter-input-container {
+  display: inline-flex;
+  margin-bottom: 10px;
+}
+
+/* text, price, city, etc. */
+.filter-input-label {
+  padding-right: 10px;
+  padding-left: 15px;
+  padding-bottom: 13px;
+}
+
+/*form*/
+.filter-input {
+  width: 136px;
+}
+
+#filter-min-price, #filter-max-price{
+  width: 55px;
+  margin-right: 12px;
+}
+
+/* city options */
+#filter-city {
+  width: 148px;
+}
+
+/* condition options */
+#filter-condition {
+  width: 156px;
+  position: relative;
+  left: 13px;
+}
+
+/* update button */
+.action-button {
+  background-color: black;
+  color: white;
+
+  width: 187px;
+  height: 40px;
+  border-radius: 7px;
+
+  position: relative;
+  left: 12px;
+  top: 5px;
+
+  font-size: 18px;
+  font-weight: 100;
+
+  cursor: pointer;
+}
+
+.action-button:hover {
+  background-color: #eed1b8;
+  color: black;
+}
+
+
+/* =================== POSTS =======================*/
+
+/* containing all posts */
+#posts {
+  margin-left: 15px;
+  display: flex;
+
+  font-family: 'Roboto', sans-serif;
+
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  align-items: flex-start;
+
+}
+
+/* pics and thier info */
+.post-contents {
+  padding: 10px;
+  border: 1px solid #d5d5d5;
+  border-radius: 3px;
+
+  margin-right: 20px;
+  margin-bottom: 20px;
+  height: 290px;
+
+  max-width: 255px;
+  min-width: 255px;
+
+}
+
+/* pic only */
+.post-image-container {
+  /* border: 1px solid purple; */
+  padding-bottom: 10px;
+}
+
+.post-image-container > img {
+  max-width: 255px;
+  max-height: 240px;
+  display: block;
+  margin:auto;
+}
+
+/* pic's info */
+.post-info-container {
+  position: relative;
+  top: 10px;
+}
+
+.post-title {
+  color: #f56c13;
+  text-decoration: none;
+  display: inline;
+  margin-right: 3px;
+}
+
+.post-title:hover {
+  text-decoration: underline;
+}
+
+.post-price {
+  font-size: 13px;
+  background-color: #edeced;
+  border: 1px solid #a1a1a1;
+  border-radius: 3px;
+  padding: 3px;
+  margin-right: 3px;
+}
+
+#sell-something-button {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+
+  width: 45px;
+  height: 45px;
+
+  border-radius: 50%;
+  background-color: #f56c13;
+  color: white;
+  border: none;
+
+  font-size: 25px;
+
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+#sell-something-button:hover {
+  width: 50px;
+  height: 50px;
+
+  font-size: 30px;
+
+  cursor: pointer;
+}
