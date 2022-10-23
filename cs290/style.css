@@ -1,4 +1,42 @@
-.title {
-    border-radius: 5px;
-    background-color: rgb(174, 173, 163)
+html {
+    font-family: 'IBM Plex Mono', monospace;
+    color: rgb(144, 144, 144);
+    background-color: rgb(28, 27, 27);
 }
+
+h1.main-title {
+    text-align: center;
+    border: 1px solid;
+    background-color: rgb(39, 38, 38);
+    color: rgb(192, 189, 189);
+    border-radius: 5px;
+    height: 80px;
+    padding-top: 30px;
+    font-weight: bold;
+}
+
+.assignments .assignment-container {
+    border: 1px solid;
+    margin: 10px;
+    padding: 20px;
+}
+
+.assignment-name {
+    font-weight: 600;
+}
+
+/* link */
+h2 a {
+    text-decoration: none;
+    color: white
+}
+
+.questions {
+    font-weight: 400;
+}
+
+.answers {
+    font-weight: lighter;
+}
+
+
