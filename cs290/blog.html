@@ -81,6 +81,40 @@
                     </p>
                 </ul>
             </div>
+
+            <div class="assignment-container">
+                <h2 class="assignment-name">Assignment 3 - Client-side JS | October 27th 2022 | Link to my <a href="https://hlakarki.github.io/cs290/assignment2/">JS Integrated Benny's List</a></h2>
+                <ul>
+                    <li><h3 class="questions">The challenges and problems I had completing this assignment</h3></li>
+                    <p class="answers">&emsp; This assignment is the hardest challenge I have faced so far. Since I was not familar with how javascript worked and how 
+                        the process and method of accessing html elements from javascript worked, I had to spend some time trying to test things out and figure how things
+                        worked. After that, it was easier forward. The biggest problem I faced during this assignment was during the filter part. I was initially using only
+                        one array which was fixed; the global state array. So, I was going through the filter from top to bottom; i.e. text, price, city, condition. With
+                        too many nested if statements. So it would work when I applied only one filter but when I added another filter posts unrealed to the first filter would
+                        get added to the dom. After hours of trying to work around this, it came to me that I could create another array that holds the posts that has passed
+                        through the first filter and use that array and not the global state array for futher checks. Finding this solution was the best part of this assignemnt.
+                        It made me very happy. 
+                    </p>
+                        
+                    <li><h3 class="questions">Things I learned from this assignment</h3></li>
+                    <p class="answers">&emsp; There was a lot new things I learned in this assignemnt. Starting off with how I could unhide the modal backdrop and sell something
+                        modal using .style.display="block". This was before the toggle of classList was talked about in lecture. Another great trick I learned was how I could get
+                        the selected values from  radio buttons using querySelector with ("input[name={{}}]:checked").value. This made my code at least 10 lines shorter wihtout all
+                        the if statements. I also learned how to create tags such as "a" tags and "span" tags and how i could use setAttribute and textContext to add href, links
+                        and texts. Lastly, I learned how to remove nodes from HTMLCollection from dom using posts.firstChild and posts.removeChild along with a while loop.
+                    </p>
+        
+                    <li><h3 class="questions">Resources I made use of in this assignment</h3></li>
+                    <p class="answers">&emsp; I would not have been able to go through this assignemnt without google and lecture notes. Everything was brand new to me so I had a
+                        hard time figuring out how to even get started on a certain problem. However, going back to resources for help and ideas was what got me out of that hole.
+                        I also talked with one of the TAs and professor to discuss the problem I had with adding posts back to the dom from the global state array.
+                    </p>
+    
+                    <li><h3 class="questions">Two things I had to Google during this assignment</h3></li>
+                    <p class="answers">&emsp; Two things I had to Google were how to add href and links to "a" tag and another was how to make an array from an HTMLCollection.                
+                    </p>
+                </ul>
+            </div>
             
         </div>
         
