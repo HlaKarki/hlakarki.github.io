@@ -49,6 +49,7 @@ function create() {
     var postImageInput = document.getElementById("post-photo-input").value
     var postPriceInput = document.getElementById("post-price-input").value
     var postCityInput = document.getElementById("post-city-input").value
+    postCityInput = postCityInput.replace(postCityInput[0],postCityInput[0].toUpperCase())
     var postConditionInput = document.querySelector("input[name='post-condition']:checked").value
     
     if (!postTextInput || !postImageInput || !postPriceInput || !postCityInput || !postConditionInput) {
@@ -132,11 +133,11 @@ function update() {
     //------------------------variable definitions--------------------------
     var tempArray = []
     var userWords = []
-    userWords = document.getElementById("filter-text").value.replace(/[!"#$%&\\'()\*+,\-\.\/:;<=>?@\[\\\]\^_`{|}~]/g, '')
+    userWords = document.getElementById("filter-text").value.replace(/[!"#%&\\'()\*+,\-\.\/:;<=>?@\[\\\]\^_`{|}~]/g, '')
     .toLowerCase().split(' ');
     var minPrice = parseInt(document.getElementById("filter-min-price").value.trim())
     var maxPrice = parseInt(document.getElementById("filter-max-price").value.trim())
-    var city = document.getElementById("filter-city").value
+    var city = document.getElementById("filter-city").value.toLowerCase()
     var conditionArray = []
     var checkbox = document.getElementsByName("filter-condition")
     for (var i = 0; i < checkbox.length; i++) {
@@ -176,16 +177,14 @@ function update() {
         removeAll()
         if (tempArray.length == 0) {
             for (var i = 0; i < globalState.length; i++) {
-                if (globalState[i].dataset.city == city) {
+                if (globalState[i].dataset.city.toLowerCase() == city) {
                     posts.appendChild(globalState[i])
                 }
             }
         }
         else {
-            console.log("tempArray:", tempArray)
-            console.log("posts.children:", posts.children)
             for (var i = 0; i < tempArray.length; i++) {
-                if (tempArray[i].dataset.city == city) {
+                if (tempArray[i].dataset.city.toLowerCase() == city) {
                     posts.appendChild(tempArray[i])
                 }
             }
@@ -242,26 +241,24 @@ function update() {
         removeAll()
         if (tempArray.length == 0) {
             for (var i = 0; i < globalState.length; i++) {
-                var temp = []
-                temp = globalState[i].textContent.trim().toLowerCase().split(/[\s$]+/) 
-                for (var j = 0; j < temp.length; j++) {
-                    for (var z = 0; z < userWords.length; z++) {
-                        if (userWords[z] == temp[j]) {
-                            posts.appendChild(globalState[i])
-                        }
+                var temp = globalState[i].textContent.trim().toLowerCase()
+                console.log("temp:", temp)
+                console.log("userWord:", userWords) 
+                for (var uW = 0; uW < userWords.length; uW++) {
+                    if (temp.includes(userWords[uW])) {
+                        posts.appendChild(globalState[i])
                     }
                 }
             }
         }
         else {
             for (var i = 0; i < tempArray.length; i++) {
-                var temp = []
-                temp = tempArray[i].textContent.trim().toLowerCase().split(/[\s$]+/)
-                for (var j = 0; j < temp.length; j++) {
-                    for (var z = 0; z < userWords.length; z++) {
-                        if (userWords[z] == temp[j]) {
-                            posts.appendChild(tempArray[i])
-                        }
+                var temp = tempArray[i].textContent.trim().toLowerCase() 
+                console.log("temp:", temp)
+                console.log("userWord:", userWords) 
+                for (var uW = 0; uW < userWords.length; uW++) {
+                    if (temp.includes(userWords[uW])) {
+                        posts.appendChild(tempArray[i])
                     }
                 }
             }
