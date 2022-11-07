@@ -242,8 +242,6 @@ function update() {
         if (tempArray.length == 0) {
             for (var i = 0; i < globalState.length; i++) {
                 var temp = globalState[i].textContent.trim().toLowerCase()
-                console.log("temp:", temp)
-                console.log("userWord:", userWords) 
                 for (var uW = 0; uW < userWords.length; uW++) {
                     if (temp.includes(userWords[uW])) {
                         posts.appendChild(globalState[i])
@@ -254,8 +252,6 @@ function update() {
         else {
             for (var i = 0; i < tempArray.length; i++) {
                 var temp = tempArray[i].textContent.trim().toLowerCase() 
-                console.log("temp:", temp)
-                console.log("userWord:", userWords) 
                 for (var uW = 0; uW < userWords.length; uW++) {
                     if (temp.includes(userWords[uW])) {
                         posts.appendChild(tempArray[i])
